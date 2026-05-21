@@ -1,0 +1,23 @@
+// ═══════════════════════════════════════════════════════════
+// Better Auth — Client Configuration
+// Provides React hooks and methods for client-side auth
+// ═══════════════════════════════════════════════════════════
+
+import { createAuthClient } from "better-auth/react";
+import { organizationClient } from "better-auth/client/plugins";
+
+export const authClient = createAuthClient({
+  baseURL: process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3000",
+  plugins: [organizationClient()],
+});
+
+// Export commonly used hooks and methods
+export const {
+  signIn,
+  signOut,
+  signUp,
+  useSession,
+  organization,
+  useActiveOrganization,
+  useListOrganizations,
+} = authClient;
