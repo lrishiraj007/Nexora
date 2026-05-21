@@ -30,10 +30,8 @@ yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
-# env files — local overrides with real secrets are gitignored
-.env
-.env.local
-.env*.local
+# env files
+.env*
 
 # vercel
 .vercel
